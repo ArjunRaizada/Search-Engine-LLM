@@ -19,7 +19,7 @@ search=DuckDuckGoSearchRun(name="Search")
 
 st.title("LangChain - Chat with search")
 """
-'StreamlitCallbackHandler' is used to implement the search mechanism here
+A Search Engine powered by LLM 
 """
 
 ## Sidebar for settings
