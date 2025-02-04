@@ -14,7 +14,13 @@ jobs:
         with:
           fetch-depth: 0
           lfs: true
+      - name: Pull from remote
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          git pull https://arjun-raizada:$HF_TOKEN@huggingface.co/spaces/arjun-raizada/Search_Engine_LLM main
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push https://arjun-raizada:$HF_TOKEN@huggingface.co/spaces/arjun-raizada/Search_Engine_LLM main
+        run: |
+          git push https://arjun-raizada:$HF_TOKEN@huggingface.co/spaces/arjun-raizada/Search_Engine_LLM main
